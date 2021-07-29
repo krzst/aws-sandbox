@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.ZonedDateTime;
 
-public class Main {
+public class AmazonTranscribeMain {
     public static final String BUCKET_NAME = "tgs-transcribe";
     public static final String FILE_NAME_IN_BUCKET = "to-process.mp3";
     public static final String AUDIO_FILE = "D:\\test-file.mp3";
@@ -30,7 +30,7 @@ public class Main {
             .withCredentials(new DefaultAWSCredentialsProviderChain())
             .build();
 
-    private static AmazonTranscribe client = AmazonTranscribeClient
+    private static com.amazonaws.services.transcribe.AmazonTranscribe client = AmazonTranscribeClient
             .builder()
             .withRegion(Regions.EU_WEST_1)
             .build();
